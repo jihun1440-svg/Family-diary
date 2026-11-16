@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+<meta name="theme-color" content="#FFFDF5" />
+<meta name="description" content="가족이 함께 할 일과 공부, 칭찬 도장을 모으는 우리 가족 기록장" />
+<title>우리 가족 기록장</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 가족 PIN 잠금 화면 (설정에서 켰을 때만 보여요) -->
+  <div id="lock-screen" class="lock hidden" aria-hidden="true">
+    <div class="lock-icon" id="lock-icon"></div>
+    <h2>우리 가족 기록장</h2>
+    <p>가족 PIN 4자리를 눌러 주세요</p>
+    <div class="pin-box" id="pin-box">
+      <span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span>
+    </div>
+    <div class="lock-err" id="lock-err"></div>
+    <div class="pin-keys" id="pin-keys">
+      <button class="pin-key" data-pin="1">1</button>
+      <button class="pin-key" data-pin="2">2</button>
+      <button class="pin-key" data-pin="3">3</button>
+      <button class="pin-key" data-pin="4">4</button>
+      <button class="pin-key" data-pin="5">5</button>
+      <button class="pin-key" data-pin="6">6</button>
+      <button class="pin-key" data-pin="7">7</button>
+      <button class="pin-key" data-pin="8">8</button>
+      <button class="pin-key" data-pin="9">9</button>
+      <button class="pin-key pin-key--wide" data-pin="del">지우기</button>
+      <button class="pin-key" data-pin="0">0</button>
+      <button class="pin-key pin-key--wide" data-pin="ok">확인</button>
+    </div>
+  </div>
+
+  <div class="app">
+    <div id="header"></div>
+    <div id="weather-slot"></div>
+    <div id="family-slot"></div>
+    <div id="tasks-slot"></div>
+    <div id="study-slot"></div>
+    <div id="stamp-slot"></div>
+    <div id="mission-slot"></div>
+    <div id="savings-slot"></div>
+    <div id="foot-slot"></div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <noscript>
+    <p style="padding:24px;text-align:center;font-size:14px;color:#7E7168">
+      이 기록장은 자바스크립트가 필요해요. 브라우저 설정에서 자바스크립트를 켜 주세요.
+    </p>
+  </noscript>
+
+  <script src="app.js"></script>
+</body>
+</html>
