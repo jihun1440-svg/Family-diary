@@ -20,7 +20,6 @@
   function num(v) { return Number(v || 0).toLocaleString('ko-KR'); }
   function p2(n) { return (n < 10 ? '0' : '') + n; }
   function clamp(v, min, max) { return Math.min(max, Math.max(min, v)); }
-  function values(o) { return Object.keys(o).map(function (k) { return o[k]; }); }
 
   var DOW = ['일', '월', '화', '수', '목', '금', '토'];
 
@@ -48,7 +47,6 @@
   function monthKey(k) { return String(k).slice(0, 7); }
   function dateLabel(k) { var d = parseKey(k); return (d.getMonth() + 1) + '월 ' + d.getDate() + '일'; }
   function fullDateLabel(k) { var d = parseKey(k); return (d.getMonth() + 1) + '월 ' + d.getDate() + '일 ' + DOW[d.getDay()] + '요일'; }
-  function shortDateLabel(k) { var d = parseKey(k); return (d.getMonth() + 1) + '.' + d.getDate(); }
 
   /* 이름 뒤에 붙는 조사 (예준이 / 지우가) */
   function josa(name, pair) {
